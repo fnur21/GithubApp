@@ -27,12 +27,12 @@
 
 <div class="row mt-3" id="searchDiv">
 <div class="col-sm-12 col-md-12 col-lg-12">
-    <form >
-        <input type="text" class="form-control" placeholder="github kullanıvılarını arayın">
+    <form id="searchForm" >
+        <input  id="githubname" type="text" class="form-control" placeholder="github kullanıcılarını arayın">
         <div class="mt-2"> 
             <!-- bu oluşturulan divleri ayırmak için içine class ile mt yanı margin top 2 3 .. ile ayırma miktarı belirleyebiliriz -->
             <button style="width: 60px;" class="btn btn-dark" type="submit">ARA</button>
-            <button style="width: 75px;" class="btn btn-dark" type="button">TEMİZLE</button>
+            <button id="clearButton" style="width: 75px;" class="btn btn-dark" type="button">TEMİZLE</button>
         </div>
     </form>
 
@@ -42,7 +42,7 @@
 
 
 <div class="row mt-3" id="profileContentDiv">
-<div class="col-sm-12 col-md-4 col-lg-4">
+<!-- <div class="col-sm-12 col-md-4 col-lg-4">
     <div id="profileDiv">
     <img class="kose mb-3" src="images/IMG_6260.JPG" width="200" height="200" >
     <hr style="border: 1px solid dark; width:200px ">
@@ -79,46 +79,32 @@
 </div>
 <div class="info">
    <a href="#">Repoları Göster</a>
-    
 </div>
-    </div>
-    <div id="repoDiv" class="row col-sm-12 col-md-12 col-lg-12">
+</div>
+    </div> -->
+    <div id="reposDiv" class="row col-sm-12 col-md-12 col-lg-12">
         <table class="table m-2 table-striped">
             <thead>
               <tr>
                 <th scope="col">No</th>
                 <th scope="col">Proje İsmi</th>
                 <th scope="col">Tarih</th>
-                
-              </tr>
+                 </tr>
             </thead>
-            <tbody>
-              <tr>
+            <tbody id="tableContent">
+              <!-- <tr>
                 <th scope="row">1</th>
                 <td>Mark</td>
                 <td>Otto</td>
-               
-              </tr>
-              <tr>
-                <th scope="row">2</th>
-                <td>Jacob</td>
-                <td>Thornton</td>
-                
-              </tr>
-              <tr>
-                <th scope="row">3</th>
-                <td>Larry</td>
-                <td>the Bird</td>
-               
-              </tr>
+                </tr> -->
+            
+            
             </tbody>
           </table>
     </div>
-</div>
+             
 
-</div>
-
-<div id="searchUserDiv" class="row ">
+<div id="searchedUserDiv" class="row ">
   <div class="col-sm-12 col-md-6 col-lg-6 ">
     <div class="m-3" id="searchMain">
     
@@ -164,6 +150,12 @@
 
    
 </div>
+
+<!-- burda önce github render edilsin ki app.js sayfasına gelindiğinde github tanımlı oplsun yani import etme sırası önemli
+  -->
+ <script src="js/github.js"></script>
+ <script src="js/ui.js"></script>
+<script src="js/main.js"></script>
 
 
 
