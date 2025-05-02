@@ -1,0 +1,22 @@
+#githublogo{
+    width: 60px;
+    height: 60px;
+    border-radius: 40px;
+}
+#header{
+    background-color: rgb(199, 207, 181);
+    border: 1px solid rgb(119, 143, 119);
+    border-radius: 30px;
+    padding: 10px;
+    
+}
+.header.title{
+   font-family:monospace;
+}
+
+#searchDiv{
+    background-color: rgb(199, 207, 181);
+    border: 1px solid rgb(119, 143, 119);
+    border-radius: 30px;
+    padding: 10px;
+}
