@@ -1,22 +1,98 @@
-#githublogo{
+#githublogo {
     width: 60px;
     height: 60px;
-    border-radius: 40px;
+    border-radius: 50%;
+    transition: transform 0.3s ease, filter 0.3s ease;
+    cursor: pointer;
+    filter: drop-shadow(0 1px 1px rgba(0,0,0,0.4));
 }
-#header{
-    background-color: rgb(199, 207, 181);
-    border: 1px solid rgb(119, 143, 119);
-    border-radius: 30px;
-    padding: 10px;
-    
-}
-.header.title{
-   font-family:monospace;
+#githublogo:hover {
+    transform: scale(1.2);
+    filter: drop-shadow(0 2px 6px rgba(0,0,0,0.6));
 }
 
-#searchDiv{
-    background-color: rgb(199, 207, 181);
-    border: 1px solid rgb(119, 143, 119);
+#header {
+  display: flex;
+  align-items: center; /* dikey ortala */
+  justify-content: center; /* yatay ortala */
+  padding: 16px 40px;
+  margin: 24px 12px 12px 12px; /* alt margin biraz azaltıldı */
+  background: rgba(85, 105, 45, 0.85);
+  backdrop-filter: blur(18px);
+  border: 1px solid rgba(70, 85, 35, 0.6);
+  border-radius: 30px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.5);
+  flex-wrap: nowrap;
+  height: 80px; /* sabit yükseklik verilebilir */
+}
+
+.header.title {
+  font-family: monospace;
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #becf8c;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+  margin: 0; /* varsayılan üst-alt boşluk kaldırıldı */
+  line-height: 1; /* satır yüksekliğini azalt */
+  display: flex;
+  align-items: center; /* içindeki metni dikey ortala */
+}
+
+#searchDiv {
+    background: linear-gradient(145deg, #4c6233, #6b874b);
+    border: 1px solid #4a6930;
     border-radius: 30px;
-    padding: 10px;
+    padding: 16px 24px;
+    box-shadow: inset 4px 4px 8px #3b4b1e, inset -4px -4px 8px #678042;
+    max-width: 600px;
+    width: 100%;
+    color: #a3ba7a;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: background 0.4s ease, color 0.4s ease, box-shadow 0.3s ease;
+    outline-offset: 0;
+}
+
+#searchDiv {
+    background: linear-gradient(145deg, #4c6233, #6b874b);
+    border: 1px solid #4a6930;
+    border-radius: 30px;
+    padding: 16px 24px;
+    box-shadow: inset 4px 4px 8px #3b4b1e, inset -4px -4px 8px #678042;
+    width: 100%;          /* max-width kaldırıldı, tam genişlik */
+    color: #a3ba7a;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: background 0.4s ease, color 0.4s ease, box-shadow 0.3s ease;
+    outline-offset: 0;
+    max-width: none;      /* max-width kaldırıldı */
+}
+
+
+#searchDiv input[type="text"]::placeholder {
+    color: #b2c078;
+    opacity: 0.8;
+}
+
+#searchDiv:hover {
+    background: linear-gradient(145deg, #5b703d, #799d5b);
+    color: #e1eac3;
+    box-shadow: inset 6px 6px 10px #4a6a23, inset -6px -6px 10px #86a858;
+}
+
+@media (max-width: 600px) {
+    #header {
+        padding: 12px 20px;
+        margin: 16px 8px;
+        justify-content: center;
+    }
+    .header.title {
+        font-size: 1.8rem;
+        margin-bottom: 8px;
+    }
+    #searchDiv {
+        max-width: 100%;
+        padding: 12px 18px;
+        font-size: 1rem;
+    }
 }
